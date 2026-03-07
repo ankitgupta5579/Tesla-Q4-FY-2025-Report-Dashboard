@@ -85,6 +85,14 @@
   .glass-panel {
     @apply bg-bg-surface/80 backdrop-blur-md border border-border-default shadow-lg;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 /* Print Styles */
