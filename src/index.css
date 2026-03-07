@@ -1,0 +1,102 @@
+@import "@fontsource/bebas-neue";
+@import "@fontsource/dm-mono";
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "DM Mono", monospace;
+  --font-mono: "DM Mono", monospace;
+
+  --color-bg-base: #0D0F14;
+  --color-bg-surface: #1A1D24;
+  --color-bg-elevated: #262A33;
+  --color-bg-overlay: rgba(13, 15, 20, 0.8);
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A0AABF;
+  --color-text-muted: #6B7280;
+  --color-text-disabled: #4B5563;
+
+  --color-accent-primary: #E31937; /* Tesla Red */
+  --color-accent-secondary: #47BFFF; /* Cyan */
+  --color-accent-tertiary: #FACC15;
+
+  --color-semantic-positive: #10B981;
+  --color-semantic-negative: #EF4444;
+  --color-semantic-warning: #F59E0B;
+  --color-semantic-neutral: #3B82F6;
+
+  --color-border-default: rgba(255, 255, 255, 0.12);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-strong: rgba(255, 255, 255, 0.24);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 20px rgba(227, 25, 55, 0.4);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-base text-text-primary font-body antialiased selection:bg-accent-primary selection:text-white;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  /* Typography scale */
+  .text-display {
+    font-size: clamp(56px, 8vw, 120px);
+    line-height: 0.9;
+  }
+  .text-h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1;
+  }
+  .text-h2 {
+    font-size: clamp(24px, 3vw, 40px);
+    line-height: 1.1;
+  }
+  .text-h3 {
+    font-size: clamp(18px, 2.5vw, 28px);
+    line-height: 1.2;
+  }
+  .text-body {
+    font-size: clamp(14px, 1.5vw, 16px);
+    line-height: 1.6;
+  }
+  .text-small {
+    font-size: clamp(12px, 1.2vw, 13px);
+    line-height: 1.5;
+  }
+  .text-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  
+  /* Utilities */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .glass-panel {
+    @apply bg-bg-surface/80 backdrop-blur-md border border-border-default shadow-lg;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    @apply bg-white text-black;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .glass-panel {
+    @apply bg-white border-gray-300 shadow-none text-black;
+  }
+}
+
