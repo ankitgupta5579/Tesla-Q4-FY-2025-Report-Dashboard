@@ -1,20 +1,18 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Tesla Q4 FY 2025 Update Dashboard
 
-# Run and deploy your AI Studio app
+A React-based dashboard for visualizing Tesla Q4 FY 2025 financial and performance data.
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/0ad7ec0c-6298-4ae9-8a0d-f77b7402f69b
+## Tech Stack
+- React + TypeScript
+- Vite
+- Tailwind CSS
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+1. Clone the repository
+2. Install dependencies:
+   npm install
 3. Run the app:
-   `npm run dev`
+   npm run dev
+   
+
